@@ -1,0 +1,84 @@
+@import url("http://fonts.cdnfonts.com/css/wonder-boy-in-monster-world");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@keyframes color {
+  0% {
+    background: #33cccc;
+  }
+  20% {
+    background: #33cc36;
+  }
+  40% {
+    background: #b8cc33;
+  }
+  60% {
+    background: #fcca00;
+  }
+  80% {
+    background: #33cc36;
+  }
+  100% {
+    background: #33cccc;
+  }
+}
+
+body {
+  background: #33cccc; /* Fallback */
+  animation: color 5s infinite linear;
+}
+
+#game {
+  width: 400px;
+  height: 500px;
+  background-color: white;
+  border: 2px solid black;
+  margin: auto;
+  overflow: hidden;
+}
+
+#block {
+  width: 50px;
+  height: 500px;
+  background-color: black;
+  position: relative;
+  left: 400px;
+  animation: block 2s infinite linear;
+}
+
+@keyframes block {
+  0% {
+    left: 400px;
+    /* width #game */
+  }
+  100% {
+    left: -50px;
+  }
+}
+
+#hole {
+  width: 50px;
+  height: 150px;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  left: 400px;
+  top: -500px;
+  animation: block 2s infinite linear;
+}
+
+#character {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 0, 0);
+  position: absolute;
+  top: 100px;
+  border-radius: 50%;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Wonder Boy In Monster World", sans-serif;
+  padding: 25px;
+}
